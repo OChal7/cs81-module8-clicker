@@ -26,7 +26,29 @@
     const button = document.getElementById('cookieButton');
     const clickCountDisplay = document.getElementById('clickCount');
     const messageDisplay = document.getElementById('milestoneMessage');
+   
+    // Init counter
+    let count = 0;
 
+    // Add click event listener
+    button.addEventListener('click', function() {
+      // Increase counter
+      count++;
+
+      // Update counter on page
+      clickCountDisplay.textContent = count;
+
+      // Check milestones
+      if (count === 10) {
+        messageDisplay.textContent = "You’re just getting started";
+      } else if (count === 25) {
+        messageDisplay.textContent = "Wow, that’s a lot of cookies";
+      } else if (count === 50) {
+        messageDisplay.textContent = "Are you still clicking?";
+      } else if (count === 100) {
+        messageDisplay.textContent = "You win! Maybe take a break.";
+      }
+    });
 
   </script>
 
