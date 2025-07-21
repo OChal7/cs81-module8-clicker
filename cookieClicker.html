@@ -41,12 +41,16 @@
       // Check milestones
       if (count === 10) {
         messageDisplay.textContent = "You’re just getting started";
+        document.body.style.backgroundColor = "blue";
       } else if (count === 25) {
         messageDisplay.textContent = "Wow, that’s a lot of cookies";
+        document.body.style.backgroundColor = "green";
       } else if (count === 50) {
         messageDisplay.textContent = "Are you still clicking?";
+        document.body.style.backgroundColor = "yellow";
       } else if (count === 100) {
         messageDisplay.textContent = "You win! Maybe take a break.";
+        document.body.style.backgroundColor = "red";
       }
     });
 
